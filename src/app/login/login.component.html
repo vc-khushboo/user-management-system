@@ -1,0 +1,35 @@
+<section id="login">
+  <mat-card class="login-card">
+    <mat-card-title color="primary">Login</mat-card-title>
+    <div class="example-container">
+      <div class="form-container" novalidate>
+        <form [formGroup]="LoginForm" (ngSubmit)="LoginForm.valid && loginUser()">
+
+          <mat-form-field class="form-element" appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email" type="email">
+            <mat-error *ngIf="LoginForm.controls.email.touched && LoginForm.controls.email.invalid">
+              <span *ngIf="LoginForm.controls.email.errors.required">Email is required.</span>
+              <span *ngIf="LoginForm.controls.email.errors.email">Invalid Email.</span>
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="form-element" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="password" formControlName="password">
+            <mat-error *ngIf="LoginForm.controls.password.errors?.required && LoginForm.controls.password.touched">
+              Password is required
+            </mat-error>
+          </mat-form-field>
+
+          <div class="form-element">
+            <button mat-raised-button color="primary" type="submit" class="button" [disabled]="!LoginForm.valid">Login
+              </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </mat-card>
+
+</section>

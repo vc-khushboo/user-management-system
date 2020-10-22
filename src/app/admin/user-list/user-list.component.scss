@@ -1,0 +1,17 @@
+.user-list-main {
+    margin: 20px;
+    .add-user-btn {
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    table {
+        td {
+            button {
+                min-width: auto;
+                padding: 0 5px;
+            }
+        }
+    }
+}
