@@ -10,11 +10,11 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `npm run api-auth` to run backend
 
-## to generate documetation 
+## Generate documetation 
 
 Run `npm run compodoc` to Generate Documents
 
-## docmentation is also available on 
+## Docmentation is also available on 
 
 https://test-7db13.web.app
 
