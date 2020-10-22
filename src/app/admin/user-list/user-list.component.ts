@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoaderService } from 'src/app/shared/services/loader.service';
 import { UserService } from 'src/app/shared/services/user.service';
 import { UserResponse } from 'src/app/shared/models/user';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-user-list',
@@ -14,7 +15,8 @@ export class UserListComponent implements OnInit {
   displayedColumns: string[] = ['id', 'username', 'name', 'phone', 'age', 'address', 'actions'];
   dataSource: UserResponse[];
   constructor(public loaderService: LoaderService,
-              private userService: UserService) { }
+              private userService: UserService,
+              public toastr: ToastrService) { }
 
   ngOnInit() {
     this.getUsers();
@@ -31,13 +33,17 @@ export class UserListComponent implements OnInit {
   }
 
   deleteUser(id: number): void {
-    this.loaderService.startLoading();
-    this.userService.deleteUser(id)
-    .subscribe(
-        res => {
-          this.getUsers();
-          this.loaderService.stopLoading();
-        });
+    if (id !== null) {
+      this.loaderService.startLoading();
+      this.userService.deleteUser(id)
+      .subscribe(
+          res => {
+            this.getUsers();
+            this.loaderService.stopLoading();
+          });
+    } else {
+      this.toastr.error('Invalid id');
+    }
   }
 
 }
