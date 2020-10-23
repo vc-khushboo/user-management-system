@@ -6,15 +6,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## API serevr 
+## API serevr
 
 Run `npm run api-auth` to run backend
 
-## Generate documetation 
+## Generate documetation
 
 Run `npm run compodoc` to Generate Documents
 
-## Docmentation is also available on 
+## Docmentation is also available on
 
 https://test-7db13.web.app
 
@@ -33,3 +33,13 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Admin login Credentials
+
+username: bruno@username.com
+password: 123456789
+
+## User Login credentials
+
+username: techie@username.com
+password: techie
