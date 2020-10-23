@@ -12,21 +12,17 @@ import { LayoutComponent } from './layout/layout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-    LayoutComponent
-  ],
+  declarations: [AppComponent, LoginComponent, LayoutComponent],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     SharedModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

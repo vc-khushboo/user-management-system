@@ -4,10 +4,9 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-loader',
   templateUrl: './loader.component.html',
-  styleUrls: ['./loader.component.scss']
+  styleUrls: ['./loader.component.scss'],
 })
-export class LoaderComponent implements OnInit, OnDestroy  {
-
+export class LoaderComponent implements OnInit, OnDestroy {
   loading: boolean;
   loadingSubscription: Subscription;
 
@@ -16,13 +15,14 @@ export class LoaderComponent implements OnInit, OnDestroy  {
   }
 
   ngOnInit() {
-    this.loadingSubscription = this.loadingScreenService.loadingStatus.subscribe((value) => {
-      this.loading = value;
-    });
+    this.loadingSubscription = this.loadingScreenService.loadingStatus.subscribe(
+      (value) => {
+        this.loading = value;
+      }
+    );
   }
 
   ngOnDestroy() {
     this.loadingSubscription.unsubscribe();
   }
-
 }

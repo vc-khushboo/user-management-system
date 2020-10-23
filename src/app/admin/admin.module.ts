@@ -7,12 +7,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserAddComponent } from './user-add/user-add.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    AdminRoutes,
-    SharedModule,
-    MatTableModule
-  ],
-  declarations: [UserListComponent, UserAddComponent]
+  imports: [CommonModule, AdminRoutes, SharedModule, MatTableModule],
+  declarations: [UserListComponent, UserAddComponent],
 })
-export class AdminModule { }
+export class AdminModule {}

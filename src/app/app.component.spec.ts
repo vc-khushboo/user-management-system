@@ -20,8 +20,8 @@ describe('AppComponent', () => {
       declarations: [AppComponent, LayoutComponent, LoginComponent],
       providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
-      ]
+        { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+      ],
     });
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
@@ -31,6 +31,4 @@ describe('AppComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-
 });

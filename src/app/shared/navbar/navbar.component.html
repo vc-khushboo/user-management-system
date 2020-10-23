@@ -2,10 +2,20 @@
   <a *ngIf="user.userrole === '1'" [routerLink]="['/admin/user/list']">Users</a>
   <span *ngIf="user.userrole === '2'">Profile</span>
   <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" *ngIf="user.userrole === '2'">
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+    *ngIf="user.userrole === '2'"
+  >
     <mat-icon>group</mat-icon>
   </button>
-  <button (click)="logout()" mat-icon-button class="example-icon" aria-label="Example icon-button with heart icon">
+  <button
+    (click)="logout()"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with heart icon"
+  >
     <mat-icon>power_settings_new</mat-icon>
   </button>
 </mat-toolbar>
